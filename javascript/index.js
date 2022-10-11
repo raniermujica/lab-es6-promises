@@ -72,42 +72,42 @@ obtainInstruction('steak', 0)
 
   .then( (step0) => {
     document.querySelector("#steak").innerHTML += `<li>${step0}</li>`
-    return obtainInstruction(1)
+    return obtainInstruction("steak", 1)
   }) 
 
   .then( (step1) => {
     document.querySelector("#steak").innerHTML += `<li>${step1}</li>`
-    return obtainInstruction(2)
+    return obtainInstruction("steak", 2)
   })
 
   .then( (step2) => {
     document.querySelector("#steak").innerHTML += `<li>${step2}</li>`
-    return obtainInstruction(3)
+    return obtainInstruction("steak", 3)
   })
 
   .then( (step3) => {
     document.querySelector("#steak").innerHTML += `<li>${step3}</li>`
-    return obtainInstruction(4)
+    return obtainInstruction("steak", 4)
   })
 
   .then( (step4) => {
     document.querySelector("#steak").innerHTML += `<li>${step4}</li>`
-    return obtainInstruction(5)
+    return obtainInstruction("steak", 5)
   })
 
   .then( (step5) => {
     document.querySelector("#steak").innerHTML += `<li>${step5}</li>`
-    return obtainInstruction(6)
+    return obtainInstruction("steak", 6)
   })
 
   .then( (step6) => {
     document.querySelector("#steak").innerHTML += `<li>${step6}</li>`
-    return obtainInstruction(7)
+    return obtainInstruction("steak", 7)
   })
 
   .then( (step7) => {
     document.querySelector("#steak").innerHTML += `<li>${step7}</li>`
-    return obtainInstruction(8)
+    return obtainInstruction("steak", 8)
   })
   
   .catch ((error) => {
@@ -126,40 +126,53 @@ obtainInstruction('steak', 0)
 
 // Iteration 3 using async/await
 // ...
-async function makeBroccoli() {
+
+obtainInstruction('broccoli', 0)
+  .then( (step0) => {
+    document.querySelector("#broccoli").innerHTML += `<li>${step0}</li>`
+    
+    async function makeBroccoli() {
   
-try {
+      try {
+      
+        let response = await makeBroccoli(1)
+        document.querySelector("#broccoli").innerHTML += `<li>${step1}</li>`
+        return response
+      
+        let response2 = await makeBroccoli(2)
+        document.querySelector("#broccoli").innerHTML += `<li>${step2}</li>`
+        return response2
+      
+        let response3 = await makeBroccoli(2)
+        
+      
+        let response4 = await makeBroccoli(3)
+        
+      
+        let response5 = await makeBroccoli(4)
+        
+        let response6 = await makeBroccoli(5)
+        
+      
+        let response7 = await makeBroccoli(6)
+        
+      
+        let response8 = await makeBroccoli(7)
+        
+      
+      }
+      catch (error) {
+        console.log(error)
+      }
+      
+      }
 
-  let response = await makeBroccoli(0)
-  console.log(response1)
+  })
 
-  let response2 = await makeBroccoli(1)
-  console.log(response2)
 
-  let response3 = await makeBroccoli(2)
-  console.log(response3)
 
-  let response4 = await makeBroccoli(3)
-  console.log(response4)
 
-  let response5 = await makeBroccoli(4)
-  console.log(response5)
 
-  let response6 = await makeBroccoli(5)
-  console.log(response6)
-
-  let response7 = await makeBroccoli(6)
-  console.log(response7)
-
-  let response8 = await makeBroccoli(7)
-  console.log(response8)
-
-}
-catch (error) {
-  console.log(error)
-}
-
-}
 
 //makeBroccoli()
 
